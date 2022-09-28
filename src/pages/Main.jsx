@@ -5,7 +5,7 @@ import Search from '../components/Search'
 const Main = () => {
   return (
     <div>
-        <Header />
+        {/* <Header /> */}
         <Search />
     </div>
   )

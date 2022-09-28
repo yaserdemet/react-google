@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from '../components/Header'
 import Main from './Main'
 import Results from './Results'
 
@@ -8,6 +9,7 @@ const AppRouter = () => {
     <div>
 
         <BrowserRouter>
+        <Header />
                 <Routes>
 
                     <Route path='/' element={<Main />} />
