@@ -1,0 +1,19 @@
+@mixin forFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRow {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+// FONTS;
+
+$font-family: "SEGOE UI", "Helvetica Neue", Helvetica, Arial, sans-serif;

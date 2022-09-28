@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AppsIcon from '@mui/icons-material/Apps';
-import headerStyle from "../Sass/header.scss"
+// import headerStyle from "../Sass/header.scss"
 const Header = () => {
   return (
     <div>

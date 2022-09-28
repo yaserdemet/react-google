@@ -1,16 +1,19 @@
 .header-left {
-    color: red;
+    font-family: $font-family;
     // font-size: 2rem;
     display: flex;
     flex-direction: row;
-    border: 2px red solid;
+    // border: 2px red solid;
     justify-content: end;
     gap: 3rem;
     padding-top: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
     padding-right: 1rem;  
     
     a {
         color: black;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 }

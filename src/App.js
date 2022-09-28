@@ -1,4 +1,4 @@
-import styles from "../src/Sass/Reset.scss"
+import styles from "../src/Sass/App.scss"
 import './App.css';
 import AppRouter from './pages/AppRouter';
 
