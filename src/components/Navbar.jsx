@@ -2,10 +2,19 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
-import { FormControl, FormLabel, RadioGroup,FormControlLabel, Radio } from "@mui/material";
+import {
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+} from "@mui/material";
+import { useConsumeContext } from "../context/ContextFile";
 
 const Navbar = () => {
-    const [dark , setDark] = useState(true)
+  const [dark, setDark] = useState(true);
+  const { loading } = useConsumeContext();
+  // console.log(loading);
   return (
     <nav className={`${dark ? "bg-light" : "bg-dark"} p-3`}>
       <div className="row">
@@ -17,13 +26,22 @@ const Navbar = () => {
           </Link>
 
           <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" onChange={() => setDark(!dark)} role="switch" id="flexSwitchCheckChecked"  />
-  <label className={` ${dark ? "text-dark" : "text-light"}  form-check-label `} for="flexSwitchCheckChecked">
-  {
-                        dark ? "Dark Mode" : "Light Mode"
-                }
-  </label>
-</div>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              onChange={() => setDark(!dark)}
+              role="switch"
+              id="flexSwitchCheckChecked"
+            />
+            <label
+              className={` ${
+                dark ? "text-dark" : "text-light"
+              }  form-check-label `}
+              for="flexSwitchCheckChecked"
+            >
+              {dark ? "Dark Mode" : "Light Mode"}
+            </label>
+          </div>
         </div>
       </div>
     </nav>

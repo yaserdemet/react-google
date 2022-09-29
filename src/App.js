@@ -1,12 +1,17 @@
 import "./App.css";
 import AppRouter from "./pages/AppRouter";
-import AppStyle from "../src/Sass/App.scss"
+import AppStyle from "../src/Sass/App.scss";
+import ContextFile, { useConsumeContext } from "./context/ContextFile";
 
 function App() {
-  return <div className="App">
-
+  
+  return (
+    <ContextFile>
+      <div >
         <AppRouter />
-  </div>;
+      </div>
+    </ContextFile>
+  );
 }
 
 export default App;
