@@ -1,16 +1,12 @@
-import styles from "../src/Sass/App.scss";
 import "./App.css";
 import AppRouter from "./pages/AppRouter";
-import SearchValue from "./contextApi/SearchValue"
+import AppStyle from "../src/Sass/App.scss"
 
 function App() {
-  return (
-    <SearchValue>
-      <div className="App">
+  return <div className="App">
+
         <AppRouter />
-      </div>
-    </SearchValue>
-  );
+  </div>;
 }
 
 export default App;

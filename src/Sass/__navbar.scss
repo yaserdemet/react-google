@@ -1,0 +1,13 @@
+div {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.darkMode {
+    background-color: black;
+}
