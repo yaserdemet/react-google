@@ -11,16 +11,30 @@ import {
 } from "@mui/material";
 import { useConsumeContext } from "../context/ContextFile";
 
-const Navbar = () => {
-  
-  const { loading, dark , setDark } = useConsumeContext();
+const SearchedInfo = () => {
+  const { loading, dark, setDark } = useConsumeContext();
   // console.log(loading);
   return (
-    <nav className="me-3">
+    <nav className="me-3   container-fluid">
       <div className="row">
-        
-        <div className="col-md-12 d-flex gap-4 justify-content-end pt-2">
-          <a target="_blank" href="https://www.google.com/intl/tr/gmail/about/">Gmail</a>
+        <div className="col-md-6 mt-2">
+      {
+        !dark ?     <img
+        src="https://www.google.com.tr/images/branding/googlelogo/2x/googlelogo_dark_color_92x30dp.png"
+        alt="" />
+
+        : 
+        <img
+        src="https://www.google.com.tr/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png"
+        alt=""
+      />
+    
+      }
+        </div>
+        <div className="col-md-6 d-flex gap-4 justify-content-end pt-2">
+          <a target="_blank" href="https://www.google.com/intl/tr/gmail/about/">
+            Gmail
+          </a>
           <Link>Images</Link>
           <Link>
             <AppsIcon />
@@ -49,4 +63,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SearchedInfo;

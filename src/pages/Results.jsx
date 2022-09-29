@@ -4,12 +4,17 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useConsumeContext } from "../context/ContextFile";
 import Loading from "../components/Loading";
+import Infos from "../components/Infos";
+import Input from "../components/Input";
+import SearchedInfo from "../components/SearchedInfo";
 
 const Results = () => {
-    useEffect(() => {
-        getDataFromApi()
-    
-      } ,[])
+  useEffect(() => {
+    getDataFromApi();
+  }, []);
+
+
+
   const {
     data,
     setData,
@@ -20,18 +25,17 @@ const Results = () => {
     setSearchValue,
   } = useConsumeContext();
 
-  console.log(data)
-
+  console.log(data);
 
   if (loading) {
     return <Loading />;
   }
 
-
-
   return (
     <div>
-      <Navbar />
+      <SearchedInfo />
+      <Input />
+      <Infos data={data} setData={setData}/>
     </div>
   );
 };

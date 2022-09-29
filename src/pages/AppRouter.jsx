@@ -7,8 +7,9 @@ import Results from "./Results";
 
 const AppRouter = () => {
     const {dark} = useConsumeContext()
+    console.log(dark)
   return (
-    <div  className={`${dark ? "bg-light" : "bg-dark"} p-3`}>
+    <div  className={`${dark ? "dark" : "light"}`}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -17,7 +18,7 @@ const AppRouter = () => {
             element={<Results />}
           />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

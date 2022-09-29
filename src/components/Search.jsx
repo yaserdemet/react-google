@@ -5,6 +5,7 @@ import googleImage from "../utils/google.webp";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import { useNavigate } from "react-router-dom";
+import Input from "./Input";
 
 const Search = () => {
     const navigate = useNavigate()
@@ -22,11 +23,11 @@ const Search = () => {
   const myRef = useRef();
   console.log(searchValue);
 
-  useEffect(() => {
-    myRef.current.focus();
+//   useEffect(() => {
+//     myRef.current.focus();
 
-    // getDataFromApi();
-  }, []);
+//     // getDataFromApi();
+//   }, []);
 
 
   return (
@@ -36,16 +37,17 @@ const Search = () => {
       </div>
 
       <div>
-        <div className="input-group mb-3 w-50 mt-3 m-auto">
+        {/* <div className="input-group mb-3 w-50 mt-3 m-auto">
           <input
-            type="text"
+            type="search"
             className="form-control rounded-5"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
             ref={myRef}
             onChange={(e) => setSearchValue(e.target.value)}
           />
-        </div>
+        </div> */}
+        <Input  searchValue={searchValue}/>
         <div className="d-flex gap-3 justify-content-center mt-5">
           <Button 
           onClick={() => navigate("/results")}
