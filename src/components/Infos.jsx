@@ -16,8 +16,8 @@ const Infos = ({ data, setData }) => {
       </div>
 
       <ul className="list-group">
-
-      <h2>People Also Asked:</h2>
+      {results?.length > 0 &&  <h2>People Also Asked:</h2>}
+     
         {answers?.map((item, index) => {
           return (
             <li className=" border-bottom  w-50 p-2" key={index}>
