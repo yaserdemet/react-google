@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
 import {
   FormControl,
@@ -12,19 +12,22 @@ import {
 import { useConsumeContext } from "../context/ContextFile";
 
 const SearchedInfo = () => {
+  const navigate = useNavigate()
   const { loading, dark, setDark } = useConsumeContext();
   // console.log(loading);
   return (
     <nav className="me-3   container-fluid">
       <div className="row">
-        <div className="col-md-6 mt-2">
+        <div className="col-md-6 mt-2" >
       {
         !dark ?     <img
+        onClick={() => navigate(-1)}
         src="https://www.google.com.tr/images/branding/googlelogo/2x/googlelogo_dark_color_92x30dp.png"
         alt="" />
 
         : 
         <img
+        onClick={() => navigate(-1)}
         src="https://www.google.com.tr/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png"
         alt=""
       />
@@ -32,7 +35,7 @@ const SearchedInfo = () => {
       }
         </div>
         <div className="col-md-6 d-flex gap-4 justify-content-end pt-2">
-          <a target="_blank" href="https://www.google.com/intl/tr/gmail/about/">
+          <a  target="_blank" href="https://www.google.com/intl/tr/gmail/about/">
             Gmail
           </a>
           <Link>Images</Link>
@@ -40,9 +43,9 @@ const SearchedInfo = () => {
             <AppsIcon />
           </Link>
 
-          <div class="form-check form-switch">
+          <div className="form-check form-switch">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               onChange={() => setDark(!dark)}
               role="switch"

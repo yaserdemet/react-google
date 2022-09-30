@@ -13,15 +13,13 @@ import GroupsIcon from "@mui/icons-material/Groups";
 
 const style = {
   position: "absolute",
-  top: "30%",
-  right: "-10%",
-  transform: "translate(-50%, -50%)",
+  top: "10%",
+  right: "2%",
   width: 350,
   bgcolor: "#2b2929",
-//   border: "2px solid #000",
   p: 4,
   zIndex: "3",
-
+  borderRadius : "10px",
   display: "flex",
   gap: "1rem",
   flexWrap: "wrap",
@@ -36,42 +34,42 @@ export default function KeepMountedModal() {
   return (
     <div>
       <Box sx={style}>
-        <div  className="d-flex w-100 flex-row justify-content-center align-items-center gap-2">
+        <div  className="d-flex w-100 flex-row justify-content-center align-items-center gap-3 ">
 
-        <span className="d-flex flex-column align-items-center  text-white">
+        <a target="_blank" href="https://www.youtube.com/?hl=tr&gl=TR" className="d-flex flex-column align-items-center  text-white hovered">
           <YouTubeIcon />
           <span>Youtube</span>
-        </span>
+        </a>
 
-        <span className="d-flex flex-column align-items-center  text-white">
+        <a href="https://translate.google.com" target="_blank" className="d-flex flex-column align-items-center  text-white hovered">
           <GTranslateIcon />
           <span>Translate</span>
-        </span>
+        </a>
 
-        <span className="d-flex flex-column align-items-center  text-white">
+        <a href="https://store.google.com/regionpicker" target="_blank" className="d-flex flex-column align-items-center  text-white hovered">
           <ShopIcon />
           <span>Google Store</span>
-        </span>
+        </a>
 
 
         </div>
 
         <div  className="d-flex flex-row w-100 justify-content-center align-items-center gap-4">
 
-        <span className="d-flex flex-column align-items-center  text-white">
+        <a href = "https://calendar.google.com/calendar/u/0/r" target="_blank" className="d-flex hovered flex-column align-items-center  text-white">
           <CalendarMonthIcon color="white" />
           <span>Calendar</span>
-        </span>
+        </a>
 
-        <span className="d-flex flex-column align-items-center text-white">
+        <a href="https://www.google.com/maps" target="_blank" className="d-flex flex-column hovered align-items-center text-white">
           <MyLocationIcon />
           <span>Maps</span>
-        </span>
+        </a>
 
-        <span className="d-flex flex-column align-items-center  text-white">
+        <a href="https://play.google.com/store/games?gl=TR" target="_blank" className="d-flex hovered flex-column align-items-center  text-white">
           <PlayArrowIcon />
           <span>Google Play</span>
-        </span>
+        </a>
 
         </div>
       

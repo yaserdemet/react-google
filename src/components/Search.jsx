@@ -23,15 +23,10 @@ const Search = () => {
   const myRef = useRef();
   console.log(searchValue);
 
-//   useEffect(() => {
-//     myRef.current.focus();
-
-//     // getDataFromApi();
-//   }, []);
 
 
   return (
-    <form>
+    <form style={{height : "100vh"}}>
       <div className="d-flex justify-content-center mt-5">
         <img src={googleImage} alt="" width="300px" />
       </div>
@@ -50,7 +45,7 @@ const Search = () => {
         <Input  searchValue={searchValue}/>
         <div className="d-flex gap-3 justify-content-center mt-5">
           <Button 
-          onClick={() => navigate("/results")}
+          onClick={() =>  navigate("/results")}
           type="submit"  variant="contained">Search on Google</Button>
           <a href="https://www.google.com/doodles" target="_blank">
           <Button  variant="contained">   

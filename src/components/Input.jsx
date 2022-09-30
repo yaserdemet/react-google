@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Input = () => {
     const navigate = useNavigate()
+    const myRef = useRef();
 
     const {
      
@@ -13,16 +14,20 @@ const Input = () => {
         
       } = useConsumeContext();
 
-    const myRef = useRef();
+  
     
     useEffect(()=>{
         myRef.current.focus()
     },[])
   
     const handleEnter = (e) =>{
-        if(e.keyCode == 13) {
+
+     
+
+         if(e.keyCode == 13) {
             getDataFromApi()
             navigate("/results")
+         
         }
     }
   

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
 import PopUp from "./PopUp"
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import {
   FormControl,
   FormLabel,
@@ -13,7 +14,7 @@ import {
 import { useConsumeContext } from "../context/ContextFile";
 
 const Navbar = () => {
-  
+  const [animationParent] = useAutoAnimate()
   const { loading, dark , setDark } = useConsumeContext();
   const [popUp , setPopUp] = useState(false)
   // console.log(loading);
@@ -21,21 +22,21 @@ const Navbar = () => {
     <nav className="me-3">
       <div className="row">
         
-        <div className="col-md-12 d-flex gap-4 justify-content-end pt-2">
+        <div className="col-md-12 d-flex gap-4 justify-content-end pt-2" >
           <a target="_blank" href="https://www.google.com/intl/tr/gmail/about/">Gmail</a>
           <Link>Images</Link>
-          <Link>
+          <Link >
             <AppsIcon onClick={() =>  setPopUp(!popUp)}/>
           </Link>
-          <Link>
+          <div  >
         {
           popUp && <PopUp />
         }
-          </Link>
+          </div>
 
-          <div class="form-check form-switch">
+          <div className="form-check form-switch">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               onChange={() => setDark(!dark)}
               role="switch"

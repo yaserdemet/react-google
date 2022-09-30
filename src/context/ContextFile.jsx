@@ -23,8 +23,7 @@ const ContextFile = ({children}) => {
 
     const getDataFromApi = async() => {
         
-
-
+     
         setLoading(true)
         const res = await axios.get(`${url}` , {
             headers : {
