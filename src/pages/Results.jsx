@@ -7,10 +7,17 @@ import Loading from "../components/Loading";
 import Infos from "../components/Infos";
 import Input from "../components/Input";
 import SearchedInfo from "../components/SearchedInfo";
+import Footer from "../components/Footer"
+
 
 const Results = () => {
+
+
+
+
   useEffect(() => {
     getDataFromApi();
+    
   }, []);
 
 
@@ -36,6 +43,7 @@ const Results = () => {
       <SearchedInfo />
       <Input />
       <Infos data={data} setData={setData}/>
+      <Footer />
     </div>
   );
 };

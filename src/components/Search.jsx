@@ -52,7 +52,12 @@ const Search = () => {
           <Button 
           onClick={() => navigate("/results")}
           type="submit"  variant="contained">Search on Google</Button>
-          <Button variant="contained">Feeling Lucky</Button>
+          <a href="https://www.google.com/doodles" target="_blank">
+          <Button  variant="contained">   
+          
+          Feeling Lucky
+        </Button>
+          </a>
         </div>
       </div>
     </form>

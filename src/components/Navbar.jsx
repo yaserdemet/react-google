@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
+import PopUp from "./PopUp"
 import {
   FormControl,
   FormLabel,
@@ -14,6 +15,7 @@ import { useConsumeContext } from "../context/ContextFile";
 const Navbar = () => {
   
   const { loading, dark , setDark } = useConsumeContext();
+  const [popUp , setPopUp] = useState(false)
   // console.log(loading);
   return (
     <nav className="me-3">
@@ -23,7 +25,12 @@ const Navbar = () => {
           <a target="_blank" href="https://www.google.com/intl/tr/gmail/about/">Gmail</a>
           <Link>Images</Link>
           <Link>
-            <AppsIcon />
+            <AppsIcon onClick={() =>  setPopUp(!popUp)}/>
+          </Link>
+          <Link>
+        {
+          popUp && <PopUp />
+        }
           </Link>
 
           <div class="form-check form-switch">
@@ -38,7 +45,7 @@ const Navbar = () => {
               className={` ${
                 !dark ? "text-dark" : "text-light"
               }  form-check-label `}
-              for="flexSwitchCheckChecked"
+              htmlFor="flexSwitchCheckChecked"
             >
               {dark ? "Dark Mode" : "Light Mode"}
             </label>
