@@ -21,7 +21,7 @@ const Search = () => {
  
 
   const myRef = useRef();
-  console.log(searchValue);
+  // console.log(searchValue);
 
 
 

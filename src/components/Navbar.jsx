@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className="me-3">
       <div className="row">
         
-        <div className="col-md-12 d-flex gap-4 justify-content-end pt-2" >
+        <div className="col-md-12 d-flex gap-4 justify-content-end pt-3" >
           <a target="_blank" href="https://www.google.com/intl/tr/gmail/about/">Gmail</a>
           <Link>Images</Link>
           <Link >

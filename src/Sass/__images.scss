@@ -1,13 +1,13 @@
-.image-box {
-    width: 80%;
-    @include forFlex;
+.cont{
+    display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 2rem;
 
-    .img-container{
-        // border: 2px red solid;
-        width: 300px;
-      
-    }
+   img {
+    border-radius: 10px;
+   }
+    
 }

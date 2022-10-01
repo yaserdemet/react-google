@@ -30,7 +30,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="fixed-bottom bg-dark text-white text-center p-2 container-fluid">
+    <footer className="fixed-bottom bg-dark text-white text-center py-2 container-fluid">
       <div className="row">
         <div className="col-md-5 gap-3 d-flex  justify-content-center">
           <div href="">About</div>

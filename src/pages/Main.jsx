@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const Main = () => {
   return (
-    <div>
+    <div >
         <Navbar />
         <Search />
         <Footer />
