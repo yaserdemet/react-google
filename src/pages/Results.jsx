@@ -7,30 +7,26 @@ import Loading from "../components/Loading";
 import Infos from "../components/Infos";
 import Input from "../components/Input";
 import SearchedInfo from "../components/SearchedInfo";
-import Footer from "../components/Footer"
-import {Helmet} from "react-helmet";
-
+import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
+import Images from "../components/Images";
 
 const Results = () => {
-
-
-
-
   useEffect(() => {
     getDataFromApi();
+    getImageFromApi();
     
   }, []);
-
-
 
   const {
     data,
     setData,
     loading,
-    setLoading,
+    getImageFromApi,
     getDataFromApi,
     searchValue,
-    setSearchValue,
+    img, setImg
+  
   } = useConsumeContext();
 
   console.log(data);
@@ -41,14 +37,15 @@ const Results = () => {
 
   return (
     <div>
-       <Helmet>
-                <meta charSet="utf-8" />
-                <title>{searchValue} - Google</title>
-                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
-            </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{searchValue} - Google</title>
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+      </Helmet>
       <SearchedInfo />
       <Input />
-      <Infos data={data} setData={setData}/>
+      <Images />
+      <Infos data={data} setData={setData} img={img} setImg={setImg}/>
       <Footer />
     </div>
   );

@@ -1,11 +1,14 @@
 import React from "react";
 import { useConsumeContext } from "../context/ContextFile";
 import Results from "../pages/Results";
+import Images from "./Images";
 
-const Infos = ({ data, setData }) => {
+const Infos = ({ data, setData,img,setImg }) => {
   const { answers, results, total } = data;
+  const {image_results } = img
+  // console.log(image_results);
   const { dark } = useConsumeContext;
-  console.log(results);
+  // console.log(results);
 
   return (
     <div className="container">
@@ -14,6 +17,8 @@ const Infos = ({ data, setData }) => {
           `Approxtimetly ${data.total} result has been found`}
         {results?.length == 0 && ` No data matches`}
       </div>
+
+      <Images image_results={image_results} />
 
       <ul className="list-group">
       {results?.length > 0 &&  <h2>People Also Asked:</h2>}
