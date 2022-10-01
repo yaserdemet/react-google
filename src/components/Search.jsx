@@ -26,7 +26,7 @@ const Search = () => {
 
 
   return (
-    <form style={{height : "100vh"}}>
+    <form  style={{height : "75vh" , marginTop : "7rem"}}>
       <div className="d-flex justify-content-center mt-5">
         <img src={googleImage} alt="" width="300px" />
       </div>
