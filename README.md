@@ -1,4 +1,5 @@
-### React Google
+<h1 align="center">React Google</h1>
+
 ![Animation](https://user-images.githubusercontent.com/99739515/193410741-be33a441-27a7-4b8f-9532-fa305da7a150.gif)
 
 ### Problem Statement
