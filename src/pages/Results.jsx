@@ -8,12 +8,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import Images from "../components/Images";
+import { useDispatch, useSelector } from "react-redux";
 
 const Results = () => {
+
+  const dispatch = useDispatch()
+  const loading = useSelector(state => state.loading)
+  console.log(loading)
+  
   const {
     data,
     setData,
-    loading,
+    
     getImageFromApi,
     getDataFromApi,
     searchValue,
