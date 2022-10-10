@@ -1,10 +1,10 @@
-<h1 align="center">React-Redux Google</h1>
+<h1 align="center">React-Redux Google Landing Page</h1>
 
 ![Animation](https://user-images.githubusercontent.com/99739515/193410741-be33a441-27a7-4b8f-9532-fa305da7a150.gif)
 
 ### Problem Statement
 
-- This project aims to create Google Page with React and Mui
+- This project aims to create Google Page with React-Redux and Mui
 
 [🌍 You can search here](https://react-google-ten.vercel.app)
 
