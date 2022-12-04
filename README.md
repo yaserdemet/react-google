@@ -1,14 +1,15 @@
-<h1 align="center">React Google</h1>
+<h1 align="center">React-Redux Google Landing Page</h1>
 
 ![Animation](https://user-images.githubusercontent.com/99739515/193410741-be33a441-27a7-4b8f-9532-fa305da7a150.gif)
 
 ### Problem Statement
 
-- This project aims to create Google Page with React and Mui
+- This project aims to create Google Page with React-Redux and Mui
 
 [🌍 You can search here](https://react-google-ten.vercel.app)
 
 #### In this project i have used;
+🛠 State Management with ContextApi and Redux ( One of them is enough but i prefered to practice redux )
 
 🛠 React Hooks ( useState, useEffect, useNavigate, useContext, useRef, createContext etc.)
 
@@ -25,8 +26,6 @@
 🛠 Seo Optimization
 
 🛠 Deployment with Vercel and Netlify
-
-🛠 State Management with ContextApi
 
 🛠 Custom Hook
 
