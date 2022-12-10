@@ -7,6 +7,10 @@ import {createStore} from "redux"
 import reducer from "./redux";
 
 function App() {
+  // if(navigator.online == true){
+  // setState(!state)
+  // if(state) return <NoConnection />
+  // }
   const store = createStore(reducer)
   return (
     <Provider store={store}>
